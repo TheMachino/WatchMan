@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<config_processing>
+	<!--kind of processing
+	1: enable the processing
+	0: disable the processing
+	-->
+	<human_detection>
+		<enable>0</enable>
+		<path_to_tf_struc>None</path_to_tf_struc>
+	</human_detection>
+
+	<face_recognition>
+		<enable>0</enable>
+		<path_to_tf_struc>None</path_to_tf_struc>
+	</face_recognition>
+</config_processing>

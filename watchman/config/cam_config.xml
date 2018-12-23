@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<cam_setting>
+	<!--size of images-->
+	<images_size>512</images_size>
+	<!--Number of cameras-->
+	<nb_cam>1</nb_cam>
+	<cam1>
+		<cam1_id>cam1</cam1_id>
+		<cam1_local>salon</cam1_local>
+		<cam1_ip_adress>Local</cam1_ip_adress>
+	</cam1>
+</cam_setting>
