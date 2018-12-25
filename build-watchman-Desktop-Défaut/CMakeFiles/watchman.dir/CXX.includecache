@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/branham/WatchMan/watchman/include/camera.hpp
+string
+-
+opencv2/opencv.hpp
+-
+
+/home/branham/WatchMan/watchman/include/load_config.hpp
+tinyxml2.h
+-
+vector
+-
+string
+-
+memory
+-
+camera.hpp
+/home/branham/WatchMan/watchman/include/camera.hpp
+
 /home/branham/WatchMan/watchman/include/read_flux.hpp
 tinyxml2.h
 -
@@ -13,10 +31,22 @@ opencv2/opencv.hpp
 -
 vector
 -
+camera.hpp
+/home/branham/WatchMan/watchman/include/camera.hpp
+
+/home/branham/WatchMan/watchman/src/camera.cpp
+../include/camera.hpp
+/home/branham/WatchMan/watchman/include/camera.hpp
+
+/home/branham/WatchMan/watchman/src/load_config.cpp
+../include/load_config.hpp
+/home/branham/WatchMan/watchman/include/load_config.hpp
 
 /home/branham/WatchMan/watchman/src/main.cpp
 iostream
 -
+../include/load_config.hpp
+/home/branham/WatchMan/watchman/include/load_config.hpp
 
 /home/branham/WatchMan/watchman/src/read_flux.cpp
 ../include/read_flux.hpp

@@ -177,6 +177,12 @@ OpenCV_DIR:PATH=/usr/local/share/OpenCV
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:STRING=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 
+//The directory containing a CMake configuration file for TinyXML2.
+TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for TinyXML.
+TinyXML_DIR:PATH=TinyXML_DIR-NOTFOUND
+
 //Value Computed by CMake
 watchman_BINARY_DIR:STATIC=/home/branham/WatchMan/build-watchman-Desktop-Défaut
 

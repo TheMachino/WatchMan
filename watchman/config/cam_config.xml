@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-
 <cam_setting>
-	<!--size of images-->
 	<images_size>512</images_size>
-	<!--Number of cameras-->
-	<nb_cam>1</nb_cam>
+	<nb_cam>2</nb_cam>
 	<cam1>
 		<cam1_id>cam1</cam1_id>
 		<cam1_local>salon</cam1_local>
-		<cam1_ip_adress>Local</cam1_ip_adress>
+		<cam1_ipAdress>1921684312</cam1_ipAdress>
+
 	</cam1>
+
+	<cam2>
+		<cam2_id>cam2</cam2_id>
+		<cam2_local>chambre</cam2_local>
+		<cam2_ipAdress>1921684312</cam2_ipAdress>
+
+	</cam2>
+
 </cam_setting>
