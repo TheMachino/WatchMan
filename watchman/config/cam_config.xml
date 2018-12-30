@@ -5,7 +5,7 @@
 	<cam1>
 		<cam1_id>cam1</cam1_id>
 		<cam1_local>salon</cam1_local>
-		<cam1_ipAdress>1921684312</cam1_ipAdress>
+		<cam1_ipAdress>192.168.43.1:8080</cam1_ipAdress>
 
 	</cam1>
 

@@ -16,7 +16,7 @@ void video_flux::initialize(std::string path_to_config)
 
     for(int i=0;i<static_cast<int>(mcamera.size());i++)
     {
-        mcapture.push_back(cv::VideoCapture(i));
+        mcapture.push_back(cv::VideoCapture("http://" + mcamera[i].get_ipAdress()+"/video?x.mjpeg"));
     }
 
 }

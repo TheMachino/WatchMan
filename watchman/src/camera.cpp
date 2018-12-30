@@ -5,7 +5,7 @@ camera::camera()
     mcam_id="";
     msize=512;
     mcam_local="";
-    mip_adress=0u;
+    mip_adress="";
     mframe=cv::Scalar::all(0.0);
 }
 
@@ -24,7 +24,7 @@ std::string camera::get_cam_local()
     return mcam_local;
 }
 
-unsigned int camera::get_ipAdress()
+std::string  camera::get_ipAdress()
 {
     return mip_adress;
 }
@@ -44,7 +44,7 @@ void camera::set_cam_local(std::string local)
     mcam_local=local;
 }
 
-void camera::set_mip_adress(unsigned int ip_adress)
+void camera::set_mip_adress(std::string ip_adress)
 {
     mip_adress=ip_adress;
 }

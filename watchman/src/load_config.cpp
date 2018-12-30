@@ -47,8 +47,8 @@ std::vector<camera> config(std::string path_to_config)
         cam.set_cam_local(pCamDescriptorsChild->GetText());
 
         pCamDescriptorsChild=pCamDescriptors->FirstChildElement(c_cam_ipAdress.c_str());
-        pCamDescriptorsChild->QueryUnsignedText(&cam_ipAdress);
-        cam.set_mip_adress(cam_ipAdress);
+        //pCamDescriptorsChild->QueryUnsignedText(&cam_ipAdress);
+        cam.set_mip_adress(pCamDescriptorsChild->GetText());
         cam.set_size(images_size);
         cam_vec.push_back(cam);
 
