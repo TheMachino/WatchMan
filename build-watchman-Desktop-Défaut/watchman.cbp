@@ -95,7 +95,10 @@
       <Unit filename="/home/branham/WatchMan/watchman/src/main.cpp">
          <Option target="watchman"/>
       </Unit>
-      <Unit filename="/home/branham/WatchMan/watchman/src/read_flux.cpp">
+      <Unit filename="/home/branham/WatchMan/watchman/src/show_flux.cpp">
+         <Option target="watchman"/>
+      </Unit>
+      <Unit filename="/home/branham/WatchMan/watchman/src/video_flux.cpp">
          <Option target="watchman"/>
       </Unit>
       <Unit filename="/home/branham/WatchMan/watchman/CMakeLists.txt">

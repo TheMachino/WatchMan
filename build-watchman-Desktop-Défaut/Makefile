@@ -204,32 +204,59 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/read_flux.o: src/read_flux.cpp.o
+src/show_flux.o: src/show_flux.cpp.o
 
-.PHONY : src/read_flux.o
+.PHONY : src/show_flux.o
 
 # target to build an object file
-src/read_flux.cpp.o:
-	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/read_flux.cpp.o
-.PHONY : src/read_flux.cpp.o
+src/show_flux.cpp.o:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/show_flux.cpp.o
+.PHONY : src/show_flux.cpp.o
 
-src/read_flux.i: src/read_flux.cpp.i
+src/show_flux.i: src/show_flux.cpp.i
 
-.PHONY : src/read_flux.i
+.PHONY : src/show_flux.i
 
 # target to preprocess a source file
-src/read_flux.cpp.i:
-	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/read_flux.cpp.i
-.PHONY : src/read_flux.cpp.i
+src/show_flux.cpp.i:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/show_flux.cpp.i
+.PHONY : src/show_flux.cpp.i
 
-src/read_flux.s: src/read_flux.cpp.s
+src/show_flux.s: src/show_flux.cpp.s
 
-.PHONY : src/read_flux.s
+.PHONY : src/show_flux.s
 
 # target to generate assembly for a file
-src/read_flux.cpp.s:
-	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/read_flux.cpp.s
-.PHONY : src/read_flux.cpp.s
+src/show_flux.cpp.s:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/show_flux.cpp.s
+.PHONY : src/show_flux.cpp.s
+
+src/video_flux.o: src/video_flux.cpp.o
+
+.PHONY : src/video_flux.o
+
+# target to build an object file
+src/video_flux.cpp.o:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_flux.cpp.o
+.PHONY : src/video_flux.cpp.o
+
+src/video_flux.i: src/video_flux.cpp.i
+
+.PHONY : src/video_flux.i
+
+# target to preprocess a source file
+src/video_flux.cpp.i:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_flux.cpp.i
+.PHONY : src/video_flux.cpp.i
+
+src/video_flux.s: src/video_flux.cpp.s
+
+.PHONY : src/video_flux.s
+
+# target to generate assembly for a file
+src/video_flux.cpp.s:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_flux.cpp.s
+.PHONY : src/video_flux.cpp.s
 
 # Help Target
 help:
@@ -249,9 +276,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/read_flux.o"
-	@echo "... src/read_flux.i"
-	@echo "... src/read_flux.s"
+	@echo "... src/show_flux.o"
+	@echo "... src/show_flux.i"
+	@echo "... src/show_flux.s"
+	@echo "... src/video_flux.o"
+	@echo "... src/video_flux.i"
+	@echo "... src/video_flux.s"
 .PHONY : help
 
 

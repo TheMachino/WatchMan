@@ -81,28 +81,28 @@ CMakeFiles/watchman.dir/src/main.cpp.o.provides: CMakeFiles/watchman.dir/src/mai
 CMakeFiles/watchman.dir/src/main.cpp.o.provides.build: CMakeFiles/watchman.dir/src/main.cpp.o
 
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.o: CMakeFiles/watchman.dir/flags.make
-CMakeFiles/watchman.dir/src/read_flux.cpp.o: /home/branham/WatchMan/watchman/src/read_flux.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/watchman.dir/src/read_flux.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/watchman.dir/src/read_flux.cpp.o -c /home/branham/WatchMan/watchman/src/read_flux.cpp
+CMakeFiles/watchman.dir/src/video_flux.cpp.o: CMakeFiles/watchman.dir/flags.make
+CMakeFiles/watchman.dir/src/video_flux.cpp.o: /home/branham/WatchMan/watchman/src/video_flux.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/watchman.dir/src/video_flux.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/watchman.dir/src/video_flux.cpp.o -c /home/branham/WatchMan/watchman/src/video_flux.cpp
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/watchman.dir/src/read_flux.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/branham/WatchMan/watchman/src/read_flux.cpp > CMakeFiles/watchman.dir/src/read_flux.cpp.i
+CMakeFiles/watchman.dir/src/video_flux.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/watchman.dir/src/video_flux.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/branham/WatchMan/watchman/src/video_flux.cpp > CMakeFiles/watchman.dir/src/video_flux.cpp.i
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watchman.dir/src/read_flux.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/branham/WatchMan/watchman/src/read_flux.cpp -o CMakeFiles/watchman.dir/src/read_flux.cpp.s
+CMakeFiles/watchman.dir/src/video_flux.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watchman.dir/src/video_flux.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/branham/WatchMan/watchman/src/video_flux.cpp -o CMakeFiles/watchman.dir/src/video_flux.cpp.s
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.o.requires:
+CMakeFiles/watchman.dir/src/video_flux.cpp.o.requires:
 
-.PHONY : CMakeFiles/watchman.dir/src/read_flux.cpp.o.requires
+.PHONY : CMakeFiles/watchman.dir/src/video_flux.cpp.o.requires
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.o.provides: CMakeFiles/watchman.dir/src/read_flux.cpp.o.requires
-	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/read_flux.cpp.o.provides.build
-.PHONY : CMakeFiles/watchman.dir/src/read_flux.cpp.o.provides
+CMakeFiles/watchman.dir/src/video_flux.cpp.o.provides: CMakeFiles/watchman.dir/src/video_flux.cpp.o.requires
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_flux.cpp.o.provides.build
+.PHONY : CMakeFiles/watchman.dir/src/video_flux.cpp.o.provides
 
-CMakeFiles/watchman.dir/src/read_flux.cpp.o.provides.build: CMakeFiles/watchman.dir/src/read_flux.cpp.o
+CMakeFiles/watchman.dir/src/video_flux.cpp.o.provides.build: CMakeFiles/watchman.dir/src/video_flux.cpp.o
 
 
 CMakeFiles/watchman.dir/src/camera.cpp.o: CMakeFiles/watchman.dir/flags.make
@@ -153,20 +153,46 @@ CMakeFiles/watchman.dir/src/load_config.cpp.o.provides: CMakeFiles/watchman.dir/
 CMakeFiles/watchman.dir/src/load_config.cpp.o.provides.build: CMakeFiles/watchman.dir/src/load_config.cpp.o
 
 
+CMakeFiles/watchman.dir/src/show_flux.cpp.o: CMakeFiles/watchman.dir/flags.make
+CMakeFiles/watchman.dir/src/show_flux.cpp.o: /home/branham/WatchMan/watchman/src/show_flux.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/watchman.dir/src/show_flux.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/watchman.dir/src/show_flux.cpp.o -c /home/branham/WatchMan/watchman/src/show_flux.cpp
+
+CMakeFiles/watchman.dir/src/show_flux.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/watchman.dir/src/show_flux.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/branham/WatchMan/watchman/src/show_flux.cpp > CMakeFiles/watchman.dir/src/show_flux.cpp.i
+
+CMakeFiles/watchman.dir/src/show_flux.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/watchman.dir/src/show_flux.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/branham/WatchMan/watchman/src/show_flux.cpp -o CMakeFiles/watchman.dir/src/show_flux.cpp.s
+
+CMakeFiles/watchman.dir/src/show_flux.cpp.o.requires:
+
+.PHONY : CMakeFiles/watchman.dir/src/show_flux.cpp.o.requires
+
+CMakeFiles/watchman.dir/src/show_flux.cpp.o.provides: CMakeFiles/watchman.dir/src/show_flux.cpp.o.requires
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/show_flux.cpp.o.provides.build
+.PHONY : CMakeFiles/watchman.dir/src/show_flux.cpp.o.provides
+
+CMakeFiles/watchman.dir/src/show_flux.cpp.o.provides.build: CMakeFiles/watchman.dir/src/show_flux.cpp.o
+
+
 # Object files for target watchman
 watchman_OBJECTS = \
 "CMakeFiles/watchman.dir/src/main.cpp.o" \
-"CMakeFiles/watchman.dir/src/read_flux.cpp.o" \
+"CMakeFiles/watchman.dir/src/video_flux.cpp.o" \
 "CMakeFiles/watchman.dir/src/camera.cpp.o" \
-"CMakeFiles/watchman.dir/src/load_config.cpp.o"
+"CMakeFiles/watchman.dir/src/load_config.cpp.o" \
+"CMakeFiles/watchman.dir/src/show_flux.cpp.o"
 
 # External object files for target watchman
 watchman_EXTERNAL_OBJECTS =
 
 /home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/main.cpp.o
-/home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/read_flux.cpp.o
+/home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/video_flux.cpp.o
 /home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/camera.cpp.o
 /home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/load_config.cpp.o
+/home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/src/show_flux.cpp.o
 /home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/build.make
 /home/branham/WatchMan/watchman/build/watchman: /usr/local/lib/libopencv_objdetect.so.4.0.0
 /home/branham/WatchMan/watchman/build/watchman: /usr/local/lib/libopencv_superres.so.4.0.0
@@ -186,7 +212,7 @@ watchman_EXTERNAL_OBJECTS =
 /home/branham/WatchMan/watchman/build/watchman: /usr/local/lib/libopencv_imgproc.so.4.0.0
 /home/branham/WatchMan/watchman/build/watchman: /usr/local/lib/libopencv_core.so.4.0.0
 /home/branham/WatchMan/watchman/build/watchman: CMakeFiles/watchman.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/branham/WatchMan/watchman/build/watchman"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/branham/WatchMan/watchman/build/watchman"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/watchman.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -195,9 +221,10 @@ CMakeFiles/watchman.dir/build: /home/branham/WatchMan/watchman/build/watchman
 .PHONY : CMakeFiles/watchman.dir/build
 
 CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/main.cpp.o.requires
-CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/read_flux.cpp.o.requires
+CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/video_flux.cpp.o.requires
 CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/camera.cpp.o.requires
 CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/load_config.cpp.o.requires
+CMakeFiles/watchman.dir/requires: CMakeFiles/watchman.dir/src/show_flux.cpp.o.requires
 
 .PHONY : CMakeFiles/watchman.dir/requires
 

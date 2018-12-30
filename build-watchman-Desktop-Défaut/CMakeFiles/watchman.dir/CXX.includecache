@@ -24,15 +24,33 @@ memory
 camera.hpp
 /home/branham/WatchMan/watchman/include/camera.hpp
 
-/home/branham/WatchMan/watchman/include/read_flux.hpp
-tinyxml2.h
--
-opencv2/opencv.hpp
--
+/home/branham/WatchMan/watchman/include/show_flux.hpp
 vector
 -
+string
+-
+iostream
+-
+load_config.hpp
+/home/branham/WatchMan/watchman/include/load_config.hpp
 camera.hpp
 /home/branham/WatchMan/watchman/include/camera.hpp
+video_flux.hpp
+/home/branham/WatchMan/watchman/include/video_flux.hpp
+
+/home/branham/WatchMan/watchman/include/video_flux.hpp
+vector
+-
+memory
+-
+opencv2/opencv.hpp
+/home/branham/WatchMan/watchman/include/opencv2/opencv.hpp
+camera.hpp
+/home/branham/WatchMan/watchman/include/camera.hpp
+string
+-
+load_config.hpp
+/home/branham/WatchMan/watchman/include/load_config.hpp
 
 /home/branham/WatchMan/watchman/src/camera.cpp
 ../include/camera.hpp
@@ -47,10 +65,16 @@ iostream
 -
 ../include/load_config.hpp
 /home/branham/WatchMan/watchman/include/load_config.hpp
+../include/show_flux.hpp
+/home/branham/WatchMan/watchman/include/show_flux.hpp
 
-/home/branham/WatchMan/watchman/src/read_flux.cpp
-../include/read_flux.hpp
-/home/branham/WatchMan/watchman/include/read_flux.hpp
+/home/branham/WatchMan/watchman/src/show_flux.cpp
+../include/show_flux.hpp
+/home/branham/WatchMan/watchman/include/show_flux.hpp
+
+/home/branham/WatchMan/watchman/src/video_flux.cpp
+../include/video_flux.hpp
+/home/branham/WatchMan/watchman/include/video_flux.hpp
 
 /usr/local/include/opencv2/calib3d.hpp
 opencv2/core.hpp

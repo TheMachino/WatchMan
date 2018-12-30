@@ -29,6 +29,11 @@ unsigned int camera::get_ipAdress()
     return mip_adress;
 }
 
+cv::Mat camera::get_frame()
+{
+    return mframe;
+}
+
 void camera::set_camId(std::string id)
 {
     mcam_id=id;

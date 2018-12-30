@@ -7,5 +7,5 @@
 #include <memory>
 #include "camera.hpp"
 
-std::vector<camera*> config(std::string path_to_config);
+std::vector<camera> config(std::string path_to_config);
 #endif // LOAD_CONFIG_HPP
