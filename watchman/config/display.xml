@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<display_setting>
+	<!--Display all camera on one screen
+	0: true
+	1:false
+	-->
+	<one_screen>0</one_screen>
+	<!--Screen size-->
+	<screen_size>1024</screen_size>
+</display_setting>

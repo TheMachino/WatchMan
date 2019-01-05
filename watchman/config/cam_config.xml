@@ -3,8 +3,8 @@
 	<images_size>512</images_size>
 	<nb_cam>1</nb_cam>
 	<cam1>
-		<cam1_id>cam1</cam1_id>
-		<cam1_local>salon</cam1_local>
+		<cam1_id>cam_android_Ham</cam1_id>
+		<cam1_local>Ham</cam1_local>
 		<cam1_ipAdress>192.168.43.1:8080</cam1_ipAdress>
 
 	</cam1>

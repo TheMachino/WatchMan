@@ -10,7 +10,7 @@ int main(int argc, char** argv)
     if(argc>1){path=argv[1];}
     cam=config(path);
     //video_flux video(path);
-    show_videos(path);
+    show_videos(path,"");
     cout<<"path to config file"<<endl;
     cout<<path<<endl;
     cout<<"number of cameras :"<<cam.size()<<endl;
