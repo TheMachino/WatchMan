@@ -38,8 +38,8 @@
          </MakeCommands>
       </Target>
       <Target title="watchman">
-         <Option output="/home/branham/WatchMan/watchman/build/watchman" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/branham/WatchMan/watchman/build" />
+         <Option output="/home/branham/WatchMan/watchman/bin/watchman" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/branham/WatchMan/watchman/bin" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -62,8 +62,8 @@
          </MakeCommands>
       </Target>
       <Target title="watchman/fast">
-         <Option output="/home/branham/WatchMan/watchman/build/watchman" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/branham/WatchMan/watchman/build" />
+         <Option output="/home/branham/WatchMan/watchman/bin/watchman" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/branham/WatchMan/watchman/bin" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -95,10 +95,16 @@
       <Unit filename="/home/branham/WatchMan/watchman/src/main.cpp">
          <Option target="watchman"/>
       </Unit>
+      <Unit filename="/home/branham/WatchMan/watchman/src/main_run.cpp">
+         <Option target="watchman"/>
+      </Unit>
       <Unit filename="/home/branham/WatchMan/watchman/src/show_flux.cpp">
          <Option target="watchman"/>
       </Unit>
       <Unit filename="/home/branham/WatchMan/watchman/src/video_flux.cpp">
+         <Option target="watchman"/>
+      </Unit>
+      <Unit filename="/home/branham/WatchMan/watchman/src/video_processing.cpp">
          <Option target="watchman"/>
       </Unit>
       <Unit filename="/home/branham/WatchMan/watchman/CMakeLists.txt">

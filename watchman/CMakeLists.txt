@@ -6,7 +6,8 @@ find_package(OpenCV REQUIRED)
 add_executable(${PROJECT_NAME} "src/main.cpp" "src/video_flux.cpp"
                                 "src/camera.cpp" "src/load_config.cpp"
                                 "src/show_flux.cpp"
-                                "data_struct/data_structure.cpp"
+                                "src/main_run.cpp"
+                                "src/video_processing.cpp"
                                 )
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 target_link_libraries(${PROJECT_NAME} tinyxml2)

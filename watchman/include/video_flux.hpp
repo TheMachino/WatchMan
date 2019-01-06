@@ -29,6 +29,9 @@ public:
      */
     void                                        read_flux();
     std::vector<camera>                         get_all_cameras();
+    void                                        set_camera_i(camera cam, int i);
+    void                                        set_all_cam(std::vector<camera> cam);
+    void                                        set_frame_cam_i(cv::Mat frame, int i);
 
 protected:
     std::vector<cv::VideoCapture>               mcapture;

@@ -204,6 +204,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/main_run.o: src/main_run.cpp.o
+
+.PHONY : src/main_run.o
+
+# target to build an object file
+src/main_run.cpp.o:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/main_run.cpp.o
+.PHONY : src/main_run.cpp.o
+
+src/main_run.i: src/main_run.cpp.i
+
+.PHONY : src/main_run.i
+
+# target to preprocess a source file
+src/main_run.cpp.i:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/main_run.cpp.i
+.PHONY : src/main_run.cpp.i
+
+src/main_run.s: src/main_run.cpp.s
+
+.PHONY : src/main_run.s
+
+# target to generate assembly for a file
+src/main_run.cpp.s:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/main_run.cpp.s
+.PHONY : src/main_run.cpp.s
+
 src/show_flux.o: src/show_flux.cpp.o
 
 .PHONY : src/show_flux.o
@@ -258,6 +285,33 @@ src/video_flux.cpp.s:
 	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_flux.cpp.s
 .PHONY : src/video_flux.cpp.s
 
+src/video_processing.o: src/video_processing.cpp.o
+
+.PHONY : src/video_processing.o
+
+# target to build an object file
+src/video_processing.cpp.o:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_processing.cpp.o
+.PHONY : src/video_processing.cpp.o
+
+src/video_processing.i: src/video_processing.cpp.i
+
+.PHONY : src/video_processing.i
+
+# target to preprocess a source file
+src/video_processing.cpp.i:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_processing.cpp.i
+.PHONY : src/video_processing.cpp.i
+
+src/video_processing.s: src/video_processing.cpp.s
+
+.PHONY : src/video_processing.s
+
+# target to generate assembly for a file
+src/video_processing.cpp.s:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_processing.cpp.s
+.PHONY : src/video_processing.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -276,12 +330,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/main_run.o"
+	@echo "... src/main_run.i"
+	@echo "... src/main_run.s"
 	@echo "... src/show_flux.o"
 	@echo "... src/show_flux.i"
 	@echo "... src/show_flux.s"
 	@echo "... src/video_flux.o"
 	@echo "... src/video_flux.i"
 	@echo "... src/video_flux.s"
+	@echo "... src/video_processing.o"
+	@echo "... src/video_processing.i"
+	@echo "... src/video_processing.s"
 .PHONY : help
 
 

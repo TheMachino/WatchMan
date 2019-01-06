@@ -3,6 +3,7 @@
 
 #include "video_flux.hpp"
 #include "opencv2/opencv.hpp"
+#include <tinyxml2.h>
 
 enum processing_type
 {
@@ -14,19 +15,32 @@ enum processing_type
     ObjectDetection
 };
 
+struct processing_parameter
+{
+    processing_type ToDo;
+    std::string     path2parameter;
+};
+
 class video_processing
 {
 
 public:
-                        video_processing(cv::Mat frame);
+                                        video_processing(cv::Mat frame, processing_parameter process_param);
+                                        video_processing();
 
 public:
-        void            NoProcessing();
-        void            Color2GreyProcessing();
-        cv::Mat         getFrame();
+        void                            NoProcessing();
+        void                            Color2GreyProcessing();
+        cv::Mat                         getFrame();
+        void                            setFrame(cv::Mat frame);
+        void                            run_process();
+
+public:
+        static processing_parameter          processing_config(std::string path_processing_config);
 
 protected:
-        cv::Mat         mframe;
+        cv::Mat                         mframe;
+        processing_parameter            mprocessing_parameter;
 
 };
 

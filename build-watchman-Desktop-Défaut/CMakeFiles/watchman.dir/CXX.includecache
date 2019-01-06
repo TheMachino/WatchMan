@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/branham/WatchMan/watchman/data_struct/data_structure.hpp
+
 /home/branham/WatchMan/watchman/include/camera.hpp
 string
 -
@@ -24,6 +26,20 @@ memory
 camera.hpp
 /home/branham/WatchMan/watchman/include/camera.hpp
 
+/home/branham/WatchMan/watchman/include/main_run.hpp
+string
+-
+video_flux.hpp
+/home/branham/WatchMan/watchman/include/video_flux.hpp
+video_processing.hpp
+/home/branham/WatchMan/watchman/include/video_processing.hpp
+show_flux.hpp
+/home/branham/WatchMan/watchman/include/show_flux.hpp
+thread
+-
+mutex
+-
+
 /home/branham/WatchMan/watchman/include/show_flux.hpp
 vector
 -
@@ -31,12 +47,16 @@ string
 -
 iostream
 -
+tinyxml2.h
+-
 load_config.hpp
 /home/branham/WatchMan/watchman/include/load_config.hpp
 camera.hpp
 /home/branham/WatchMan/watchman/include/camera.hpp
 video_flux.hpp
 /home/branham/WatchMan/watchman/include/video_flux.hpp
+../data_struct/data_structure.hpp
+/home/branham/WatchMan/watchman/data_struct/data_structure.hpp
 
 /home/branham/WatchMan/watchman/include/video_flux.hpp
 vector
@@ -51,6 +71,14 @@ string
 -
 load_config.hpp
 /home/branham/WatchMan/watchman/include/load_config.hpp
+
+/home/branham/WatchMan/watchman/include/video_processing.hpp
+video_flux.hpp
+/home/branham/WatchMan/watchman/include/video_flux.hpp
+opencv2/opencv.hpp
+/home/branham/WatchMan/watchman/include/opencv2/opencv.hpp
+tinyxml2.h
+-
 
 /home/branham/WatchMan/watchman/src/camera.cpp
 ../include/camera.hpp
@@ -67,6 +95,14 @@ iostream
 /home/branham/WatchMan/watchman/include/load_config.hpp
 ../include/show_flux.hpp
 /home/branham/WatchMan/watchman/include/show_flux.hpp
+../include/main_run.hpp
+/home/branham/WatchMan/watchman/include/main_run.hpp
+
+/home/branham/WatchMan/watchman/src/main_run.cpp
+../include/main_run.hpp
+/home/branham/WatchMan/watchman/include/main_run.hpp
+vector
+-
 
 /home/branham/WatchMan/watchman/src/show_flux.cpp
 ../include/show_flux.hpp
@@ -75,6 +111,14 @@ iostream
 /home/branham/WatchMan/watchman/src/video_flux.cpp
 ../include/video_flux.hpp
 /home/branham/WatchMan/watchman/include/video_flux.hpp
+
+/home/branham/WatchMan/watchman/src/video_processing.cpp
+../include/video_processing.hpp
+/home/branham/WatchMan/watchman/include/video_processing.hpp
+thread
+-
+mutex
+-
 
 /usr/local/include/opencv2/calib3d.hpp
 opencv2/core.hpp

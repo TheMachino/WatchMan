@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <config_processing>
 	<!--kind of processing
-	1: enable the processing
-	0: disable the processing
+	0: No processing
+	1: Color to grey
+	2: Edge detection
+	3: Face Recognition
+	4: Pedestrian Detection
+	5: Objects Detection 
 	-->
-	<human_detection>
-		<enable>0</enable>
-		<path_to_tf_struc>None</path_to_tf_struc>
-	</human_detection>
+	<processing_type>0</processing_type>
+	<!-- Path to processing parameters-->
+	<path_config_processing>path_config</path_config_processing>
 
-	<face_recognition>
-		<enable>0</enable>
-		<path_to_tf_struc>None</path_to_tf_struc>
-	</face_recognition>
 </config_processing>

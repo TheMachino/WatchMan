@@ -43,12 +43,13 @@ void show_videos(video_flux video, std::string path_to_display_config)
 void DisplayOneScreen(video_flux video, int size_screen)
 {
     // initialization step
+        std::cout<<"Display on one Screen"<<std::endl;
         std::cout<<"Number of camera"<<std::endl;
         std::cout<<video.get_all_cameras().size()<<std::endl;
 
         int size_im=video.get_all_cameras()[0].get_size();
         cv::Point corner;
-        cv::Mat screen = cv::Mat::zeros(cv::Size(size_screen, size_screen), CV_64F);
+        cv::Mat screen = cv::Mat::zeros(cv::Size(size_screen, size_screen), CV_64FC3);
 
         int max_im_by_line=size_screen/size_im;
         int max_i=video.get_all_cameras().size()/max_im_by_line;
@@ -68,10 +69,11 @@ void DisplayOneScreen(video_flux video, int size_screen)
             {
                 corner.x=static_cast<int>(j);
                 corner.y=static_cast<int>(i);
-                (video.get_all_cameras()[max_i*i+j].get_frame()).copyTo(screen(cv::Rect(corner.x,corner.y, size_im, size_im)));
+                //(video.get_all_cameras()[max_i*i+j].get_frame()).copyTo(screen(cv::Rect(corner.x,corner.y, size_im, size_im)));
             }
         }
-        cv::imshow("test",screen);
+        (video.get_all_cameras()[0].get_frame()).copyTo(screen(cv::Rect(0,0, 512, 512)));
+        cv::imshow("test", screen);
 }
 
 
