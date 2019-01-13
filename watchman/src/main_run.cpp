@@ -12,17 +12,12 @@ void run(std::string path_cam_config,
    video_processing              processing(video.get_all_cameras()[0].get_frame()
                                              ,processing_parameter);
     std::vector<std::thread>      thread_list;
-    std::mutex                    locker_thread;
     char                          stop_process=0;
 
     for (;stop_process!=27;)
     {
-
-        video.read_flux();
-
-        locker_thread.lock();
+        video.read_flux_multithread();
         processing.run_process(video);
-        locker_thread.unlock();
 
 
         show_videos(video, path_display_config);

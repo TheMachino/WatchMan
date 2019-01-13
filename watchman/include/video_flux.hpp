@@ -7,6 +7,9 @@
 #include "camera.hpp"
 #include <string>
 #include "load_config.hpp"
+#include <thread>
+#include <mutex>
+
 class video_flux
 {
 public:
@@ -35,10 +38,12 @@ public:
     void                                        set_camera_i(camera cam, int i);
     void                                        set_all_cam(std::vector<camera> cam);
     void                                        set_frame_cam_i(cv::Mat frame, int i);
+    void                                        read_one_flux(int i);
+    void                                        read_flux_multithread();
 
 protected:
     std::vector<cv::VideoCapture>               mcapture;
-    cv::Mat                                     mframe;
+    std::vector<cv::Mat>                        mframe;
     std::vector<camera>                         mcamera;
 };
 

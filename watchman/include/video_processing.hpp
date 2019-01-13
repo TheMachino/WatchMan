@@ -5,6 +5,7 @@
 #include "opencv2/opencv.hpp"
 #include <tinyxml2.h>
 
+
 enum processing_type
 {
     No_processing=0,

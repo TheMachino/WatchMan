@@ -38,15 +38,20 @@ void video_processing::setFrame(cv::Mat frame)
 void video_processing::run_process(video_flux  video)
 {
     std::vector<std::thread> all_thread;
+    std::mutex               locker_thread;
+
     if(mprocessing_parameter.ToDo==No_processing)
     {
             for(int i=0;i<video.get_all_cameras().size();i++)
             {
+
+               locker_thread.lock();
                all_thread.push_back(std::thread(&video_processing::NoProcessing,
                                                 this,
                                                 video.get_frame_i_adress(i))
                                     );
 
+               locker_thread.unlock();
             }
     }
     else if(mprocessing_parameter.ToDo==Color2Grey)
@@ -81,7 +86,7 @@ void video_processing::run_process(video_flux  video)
         all_thread[i].join();
     }
 
-    all_thread.clear();
+    //all_thread.clear();
 
 }
 
