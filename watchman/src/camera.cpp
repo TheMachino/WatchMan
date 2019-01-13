@@ -34,6 +34,11 @@ cv::Mat camera::get_frame()
     return mframe;
 }
 
+cv::Mat *camera::get_frame_adress()
+{
+    return &mframe;
+}
+
 void camera::set_camId(std::string id)
 {
     mcam_id=id;

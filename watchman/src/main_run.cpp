@@ -19,16 +19,11 @@ void run(std::string path_cam_config,
     {
 
         video.read_flux();
-        for(int i=0;i<video.get_all_cameras().size();i++)
-        {
-            processing.setFrame(video.get_all_cameras()[i].get_frame());
-            locker_thread.lock();
-            processing.run_process();
-            locker_thread.unlock();
 
-            video.set_frame_cam_i(processing.getFrame(),i);
+        locker_thread.lock();
+        processing.run_process(video);
+        locker_thread.unlock();
 
-        }
 
         show_videos(video, path_display_config);
         stop_process=cv::waitKey(1);

@@ -15,14 +15,14 @@ video_processing::video_processing()
     mprocessing_parameter.path2parameter="";
 }
 
-void video_processing::NoProcessing()
+void video_processing::NoProcessing(cv::Mat* frame)
 {
     //No treatment;
 }
 
-void video_processing::Color2GreyProcessing()
+void video_processing::Color2GreyProcessing(cv::Mat* frame)
 {
-    cv::cvtColor(mframe, mframe, cv::COLOR_BGR2GRAY);
+    cv::cvtColor(*frame, *frame, cv::COLOR_BGR2GRAY);
 }
 
 cv::Mat video_processing::getFrame()
@@ -35,23 +35,53 @@ void video_processing::setFrame(cv::Mat frame)
     mframe=frame.clone();
 }
 
-void video_processing::run_process()
+void video_processing::run_process(video_flux  video)
 {
+    std::vector<std::thread> all_thread;
     if(mprocessing_parameter.ToDo==No_processing)
     {
-            std::thread t(&video_processing::NoProcessing,this);
-            t.join();
+            for(int i=0;i<video.get_all_cameras().size();i++)
+            {
+               all_thread.push_back(std::thread(&video_processing::NoProcessing,
+                                                this,
+                                                video.get_frame_i_adress(i))
+                                    );
+
+            }
     }
     else if(mprocessing_parameter.ToDo==Color2Grey)
     {
-            std::thread t(&video_processing::Color2GreyProcessing, this);
-            t.join();
+
+        for(int i=0;i<video.get_all_cameras().size();i++)
+        {
+          all_thread.push_back(std::thread(&video_processing::Color2GreyProcessing,
+                                            this,
+                                            video.get_frame_i_adress(i))
+                                );
+
+        }
+
+
     }
     else
     {
-            std::thread t(&video_processing::NoProcessing,this);
-            t.join();
+        for(int i=0;i<video.get_all_cameras().size();i++)
+        {
+           all_thread.push_back(std::thread(&video_processing::NoProcessing,
+                                            this,
+                                            video.get_frame_i_adress(i))
+                                );
+
+        }
+
     }
+
+    for(int i=0;i<video.get_all_cameras().size();i++)
+    {
+        all_thread[i].join();
+    }
+
+    all_thread.clear();
 
 }
 

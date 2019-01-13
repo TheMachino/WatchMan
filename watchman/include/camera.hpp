@@ -15,6 +15,7 @@ public:
     std::string             get_cam_local();
     std::string             get_ipAdress();
     cv::Mat                 get_frame();
+    cv::Mat*                get_frame_adress();
     void                    set_camId(std::string id);
     void                    set_cam_local(std::string local);
     void                    set_mip_adress(std::string ip_adress);

@@ -7,7 +7,7 @@
 
 enum processing_type
 {
-    No_processing,
+    No_processing=0,
     Color2Grey,
     EdgeDetecto,
     FaceRecognition,
@@ -29,14 +29,14 @@ public:
                                         video_processing();
 
 public:
-        void                            NoProcessing();
-        void                            Color2GreyProcessing();
+        void                            NoProcessing(cv::Mat* frame);
+        void                            Color2GreyProcessing(cv::Mat* frame);
         cv::Mat                         getFrame();
         void                            setFrame(cv::Mat frame);
-        void                            run_process();
+        void                            run_process(video_flux video);
 
 public:
-        static processing_parameter          processing_config(std::string path_processing_config);
+        static processing_parameter     processing_config(std::string path_processing_config);
 
 protected:
         cv::Mat                         mframe;

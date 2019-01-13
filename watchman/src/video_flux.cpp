@@ -23,9 +23,12 @@ void video_flux::initialize(std::string path_to_config)
 
 void video_flux::read_flux()
 {
+    cv::Size size(mcamera[0].get_size(),mcamera[0].get_size());
+
     for (size_t j=0;j<mcapture.size();j++)
     {
         mcapture[j] >> mframe;
+        cv::resize(mframe,mframe,size);
         mcamera[j].set_frame(mframe.clone());
     }
 }
@@ -34,6 +37,21 @@ std::vector<camera> video_flux::get_all_cameras()
 {
     return mcamera;
 
+}
+
+camera video_flux::get_cam_i(int i)
+{
+    return mcamera[i];
+}
+
+cv::Mat video_flux::get_frame_i(int i)
+{
+    return mcamera[i].get_frame();
+}
+
+cv::Mat *video_flux::get_frame_i_adress(int i)
+{
+    return mcamera[i].get_frame_adress();
 }
 
 void video_flux::set_camera_i(camera cam, int i)
