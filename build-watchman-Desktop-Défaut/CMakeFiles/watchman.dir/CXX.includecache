@@ -115,6 +115,8 @@ vector
 /home/branham/WatchMan/watchman/src/video_flux.cpp
 ../include/video_flux.hpp
 /home/branham/WatchMan/watchman/include/video_flux.hpp
+opencv2/highgui/highgui.hpp
+-
 
 /home/branham/WatchMan/watchman/src/video_processing.cpp
 ../include/video_processing.hpp
@@ -909,6 +911,10 @@ opencv2/imgcodecs.hpp
 /usr/local/include/opencv2/opencv2/imgcodecs.hpp
 opencv2/videoio.hpp
 /usr/local/include/opencv2/opencv2/videoio.hpp
+
+/usr/local/include/opencv2/highgui/highgui.hpp
+opencv2/highgui.hpp
+/usr/local/include/opencv2/highgui/opencv2/highgui.hpp
 
 /usr/local/include/opencv2/imgcodecs.hpp
 opencv2/core.hpp

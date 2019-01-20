@@ -31,6 +31,8 @@ std::vector<camera> config(std::string path_to_config)
     std::string cam_id;
     std::string cam_local;
     unsigned int cam_ipAdress;
+    int         type_cam_int;
+    camera_type type_cam;
 
     for(size_t i=0; i<static_cast<size_t>(nbCam);i++)
     {
@@ -40,6 +42,8 @@ std::vector<camera> config(std::string path_to_config)
         c_cam_ipAdress=c_num_cam+std::string("_ipAdress");
 
         pCamDescriptors=pRoot->FirstChildElement(c_num_cam.c_str());
+        pCamDescriptors->QueryIntAttribute("cam_type",&type_cam_int);
+        cam.set_camera_type(static_cast<camera_type>(type_cam_int));
         pCamDescriptorsChild=pCamDescriptors->FirstChildElement(c_cam_id.c_str());
         cam.set_camId(pCamDescriptorsChild->GetText());
 

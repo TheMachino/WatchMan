@@ -701,6 +701,7 @@ CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/flann/s
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/flann/saving.h
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/flann/timer.h
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/highgui.hpp
+CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/imgcodecs.hpp
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/imgproc.hpp
 CMakeFiles/watchman.dir/src/video_flux.cpp.o: /usr/local/include/opencv2/ml.hpp

@@ -56,12 +56,26 @@ void DisplayOneScreen(video_flux video, int size_screen)
                                         video.get_all_cameras()[0].get_frame().type());
 
         int max_im_by_line=size_screen/size_im;
+        std::cout<<"max im par ligne: "<<max_im_by_line<<std::endl;
         int max_i=video.get_all_cameras().size()/max_im_by_line;
         int max_j;
         int pos_x=0;
         int pos_y=0;
         int nb_remain_cap=video.get_all_cameras().size()%max_im_by_line;
-        int k=(nb_remain_cap==0) ? max_i: (max_i+1);
+        int k;
+        /*Not a mathematical understanding, only in order to
+         * the algorithm works in cas where we have less cameras than the max camera by line*/
+        if(video.get_all_cameras().size()<max_im_by_line)
+        {
+            k=0;
+            max_i=0;
+        }
+
+        else
+        {
+            std::cout<<"reste im: "<<nb_remain_cap<<std::endl;
+            k=(nb_remain_cap==0) ? max_i: (max_i+1);
+        }
         //Display all flux
         for(size_t i=0; i<=static_cast<size_t>(k);i++)
         {

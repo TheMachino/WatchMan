@@ -39,6 +39,11 @@ cv::Mat *camera::get_frame_adress()
     return &mframe;
 }
 
+camera_type camera::get_cam_type()
+{
+    return mtype;
+}
+
 void camera::set_camId(std::string id)
 {
     mcam_id=id;
@@ -62,4 +67,9 @@ void camera::set_frame(cv::Mat frame)
 void camera::set_size(int size)
 {
     msize=size;
+}
+
+void camera::set_camera_type(camera_type type_cam)
+{
+    mtype=type_cam;
 }
