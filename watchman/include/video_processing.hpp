@@ -30,11 +30,11 @@ public:
                                         video_processing();
 
 public:
-        void                            NoProcessing(cv::Mat* frame);
-        void                            Color2GreyProcessing(cv::Mat* frame);
+        void                            NoProcessing(video_flux* video, int i);
+        void                            Color2GreyProcessing(video_flux* video,int i);
         cv::Mat                         getFrame();
         void                            setFrame(cv::Mat frame);
-        void                            run_process(video_flux video);
+        void                            run_process(video_flux* video);
 
 public:
         static processing_parameter     processing_config(std::string path_processing_config);

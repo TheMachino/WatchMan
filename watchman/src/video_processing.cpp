@@ -15,14 +15,17 @@ video_processing::video_processing()
     mprocessing_parameter.path2parameter="";
 }
 
-void video_processing::NoProcessing(cv::Mat* frame)
+void video_processing::NoProcessing(video_flux* video, int i)
 {
     //No treatment;
 }
 
-void video_processing::Color2GreyProcessing(cv::Mat* frame)
+void video_processing::Color2GreyProcessing(video_flux* video,int i)
 {
-    cv::cvtColor(*frame, *frame, cv::COLOR_BGR2GRAY);
+    cv::Mat frame;
+    cv::cvtColor(video->get_frame_i(i), frame, cv::COLOR_BGR2GRAY);
+    video->set_frame_cam_i(frame, i);
+
 }
 
 cv::Mat video_processing::getFrame()
@@ -35,20 +38,20 @@ void video_processing::setFrame(cv::Mat frame)
     mframe=frame.clone();
 }
 
-void video_processing::run_process(video_flux  video)
+void video_processing::run_process(video_flux*  video)
 {
     std::vector<std::thread> all_thread;
     std::mutex               locker_thread;
 
     if(mprocessing_parameter.ToDo==No_processing)
     {
-            for(int i=0;i<video.get_all_cameras().size();i++)
+            for(int i=0;i<video->get_all_cameras().size();i++)
             {
 
                locker_thread.lock();
                all_thread.push_back(std::thread(&video_processing::NoProcessing,
                                                 this,
-                                                video.get_frame_i_adress(i))
+                                                video, i)
                                     );
 
                locker_thread.unlock();
@@ -57,11 +60,11 @@ void video_processing::run_process(video_flux  video)
     else if(mprocessing_parameter.ToDo==Color2Grey)
     {
 
-        for(int i=0;i<video.get_all_cameras().size();i++)
+        for(int i=0;i<video->get_all_cameras().size();i++)
         {
           all_thread.push_back(std::thread(&video_processing::Color2GreyProcessing,
                                             this,
-                                            video.get_frame_i_adress(i))
+                                            video, i)
                                 );
 
         }
@@ -70,23 +73,23 @@ void video_processing::run_process(video_flux  video)
     }
     else
     {
-        for(int i=0;i<video.get_all_cameras().size();i++)
+        for(int i=0;i<video->get_all_cameras().size();i++)
         {
            all_thread.push_back(std::thread(&video_processing::NoProcessing,
                                             this,
-                                            video.get_frame_i_adress(i))
+                                            video, i)
                                 );
 
         }
 
     }
 
-    for(int i=0;i<video.get_all_cameras().size();i++)
+    for(int i=0;i<video->get_all_cameras().size();i++)
     {
         all_thread[i].join();
     }
 
-    //all_thread.clear();
+    all_thread.clear();
 
 }
 

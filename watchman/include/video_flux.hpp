@@ -35,6 +35,7 @@ public:
     camera                                      get_cam_i(int i);
     cv::Mat                                     get_frame_i(int i);
     cv::Mat*                                    get_frame_i_adress(int i);
+    cv::Mat                                     noiseFrame(cv::Size size, int type);
     void                                        set_camera_i(camera cam, int i);
     void                                        set_all_cam(std::vector<camera> cam);
     void                                        set_frame_cam_i(cv::Mat frame, int i);

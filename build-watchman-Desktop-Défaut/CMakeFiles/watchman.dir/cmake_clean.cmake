@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/watchman.dir/src/show_flux.cpp.o"
   "CMakeFiles/watchman.dir/src/main_run.cpp.o"
   "CMakeFiles/watchman.dir/src/video_processing.cpp.o"
+  "CMakeFiles/watchman.dir/tools/console_display.cpp.o"
   "/home/branham/WatchMan/watchman/bin/watchman.pdb"
   "/home/branham/WatchMan/watchman/bin/watchman"
 )

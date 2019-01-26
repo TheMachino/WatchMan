@@ -1,5 +1,6 @@
 #include "../include/video_flux.hpp"
 #include <opencv2/highgui/highgui.hpp>
+#include <random>
 
 video_flux::video_flux(std::string path_to_config)
 {
@@ -20,7 +21,6 @@ void video_flux::initialize(std::string path_to_config)
         if(mcamera[i].get_cam_type()==camera_type::ip_cam)
         {
             mcapture.push_back(cv::VideoCapture("http://" + mcamera[i].get_ipAdress()+"/video?x.mjpeg"));
-            std::cout<<"here ip cam"<<std::endl;
 
         }
 
@@ -28,10 +28,6 @@ void video_flux::initialize(std::string path_to_config)
         {
             cam_usb_num=std::stoi(mcamera[i].get_ipAdress());
             mcapture.push_back(cv::VideoCapture(cam_usb_num));
-
-            std::cout<<"here usb cam: "<<mcamera[i].get_ipAdress()<<std::endl;
-
-
         }
 
 
@@ -45,13 +41,7 @@ void video_flux::initialize(std::string path_to_config)
 void video_flux::read_flux()
 {
     cv::Size size(mcamera[0].get_size(),mcamera[0].get_size());
-    /*float cap_height =  mcapture[0].get(cv::CAP_PROP_FRAME_HEIGHT);
-    float cap_width  =  mcapture[0].get(cv::CAP_PROP_FRAME_WIDTH);
-    float cam_size   =  static_cast<float>(mcamera[0].get_size());
-    cv::Size size(cam_size,
-            (cam_size/cap_height) *cap_width);
-    std::cout<<"cam setting heigth: "<<cam_size<<std::endl;
-    std::cout<<"cam setting width: "<<(int)((cam_size/cap_height)*cap_width)<<std::endl;*/
+
     for (size_t j=0;j<mcapture.size();j++)
     {
         mcapture[j] >> mframe[j];
@@ -63,7 +53,16 @@ void video_flux::read_flux()
 void video_flux::read_one_flux(int i)
 {
     cv::Size size(mcamera[0].get_size(),mcamera[0].get_size());
-    mcapture[i] >> mframe[i];
+
+    if(!mcapture[i].isOpened())
+    {
+        mframe[i]=noiseFrame(size, CV_8UC3).clone();
+    }
+    else
+    {
+        mcapture[i] >> mframe[i];
+
+    }
     cv::resize(mframe[i],mframe[i],size);
     mcamera[i].set_frame(mframe[i].clone());
 }
@@ -85,7 +84,7 @@ void video_flux::read_flux_multithread()
         all_thread[j].join();
     }
 
-    //all_thread.clear();
+    all_thread.clear();
 }
 std::vector<camera> video_flux::get_all_cameras()
 {
@@ -108,6 +107,19 @@ cv::Mat *video_flux::get_frame_i_adress(int i)
     return mcamera[i].get_frame_adress();
 }
 
+cv::Mat video_flux::noiseFrame(cv::Size size, int type)
+{
+    cv::Mat frame(size, type);
+    cv::MatIterator_<cv::Vec3b> it, end;
+    for( it = frame.begin<cv::Vec3b>(), end = frame.end<cv::Vec3b>(); it != end; ++it)
+    {
+        (*it)[0] = 0;
+        (*it)[1] = 200;
+        (*it)[2] = 0;
+    }
+   return frame;
+}
+
 void video_flux::set_camera_i(camera cam, int i)
 {
     mcamera[i]=cam;
@@ -120,5 +132,5 @@ void video_flux::set_all_cam(std::vector<camera> cam)
 
 void video_flux::set_frame_cam_i(cv::Mat frame,int i)
 {
-    mcamera[i].set_frame(frame.clone());
+    mcamera[i].set_frame(frame);
 }
