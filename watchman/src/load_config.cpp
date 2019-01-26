@@ -1,4 +1,5 @@
 #include "../include/load_config.hpp"
+#include "../tools/console_display.hpp"
 
 std::vector<camera> config(std::string path_to_config)
 {
@@ -58,7 +59,8 @@ std::vector<camera> config(std::string path_to_config)
 
     }
 
-
+    //display param_information on screen
+    display_param(cam_vec);
 
     return cam_vec;
 

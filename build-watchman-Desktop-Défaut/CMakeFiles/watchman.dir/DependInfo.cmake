@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/branham/WatchMan/watchman/src/show_flux.cpp" "/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles/watchman.dir/src/show_flux.cpp.o"
   "/home/branham/WatchMan/watchman/src/video_flux.cpp" "/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles/watchman.dir/src/video_flux.cpp.o"
   "/home/branham/WatchMan/watchman/src/video_processing.cpp" "/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles/watchman.dir/src/video_processing.cpp.o"
+  "/home/branham/WatchMan/watchman/tools/console_display.cpp" "/home/branham/WatchMan/build-watchman-Desktop-Défaut/CMakeFiles/watchman.dir/tools/console_display.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

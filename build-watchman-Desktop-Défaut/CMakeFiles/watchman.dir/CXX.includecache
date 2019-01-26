@@ -91,6 +91,8 @@ tinyxml2.h
 /home/branham/WatchMan/watchman/src/load_config.cpp
 ../include/load_config.hpp
 /home/branham/WatchMan/watchman/include/load_config.hpp
+../tools/console_display.hpp
+/home/branham/WatchMan/watchman/tools/console_display.hpp
 
 /home/branham/WatchMan/watchman/src/main.cpp
 iostream
@@ -117,6 +119,8 @@ vector
 /home/branham/WatchMan/watchman/include/video_flux.hpp
 opencv2/highgui/highgui.hpp
 -
+random
+-
 
 /home/branham/WatchMan/watchman/src/video_processing.cpp
 ../include/video_processing.hpp
@@ -125,6 +129,20 @@ thread
 -
 mutex
 -
+
+/home/branham/WatchMan/watchman/tools/console_display.cpp
+console_display.hpp
+/home/branham/WatchMan/watchman/tools/console_display.hpp
+vector
+-
+
+/home/branham/WatchMan/watchman/tools/console_display.hpp
+iostream
+-
+string
+-
+../include/camera.hpp
+/home/branham/WatchMan/watchman/include/camera.hpp
 
 /usr/local/include/opencv2/calib3d.hpp
 opencv2/core.hpp

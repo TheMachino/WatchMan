@@ -8,6 +8,7 @@ add_executable(${PROJECT_NAME} "src/main.cpp" "src/video_flux.cpp"
                                 "src/show_flux.cpp"
                                 "src/main_run.cpp"
                                 "src/video_processing.cpp"
+                                "tools/console_display.cpp"
                                 )
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 target_link_libraries(${PROJECT_NAME} tinyxml2)

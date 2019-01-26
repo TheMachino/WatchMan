@@ -107,6 +107,12 @@
       <Unit filename="/home/branham/WatchMan/watchman/src/video_processing.cpp">
          <Option target="watchman"/>
       </Unit>
+      <Unit filename="/home/branham/WatchMan/watchman/tools/console_display.cpp">
+         <Option target="watchman"/>
+      </Unit>
+      <Unit filename="/home/branham/WatchMan/watchman/tools/console_display.hpp">
+         <Option target="watchman"/>
+      </Unit>
       <Unit filename="/home/branham/WatchMan/watchman/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />
       </Unit>

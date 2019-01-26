@@ -61,7 +61,7 @@ void camera::set_mip_adress(std::string ip_adress)
 
 void camera::set_frame(cv::Mat frame)
 {
-    mframe=frame;
+    mframe=frame.clone();
 }
 
 void camera::set_size(int size)

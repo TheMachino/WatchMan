@@ -6,7 +6,7 @@ void run(std::string path_cam_config,
 {
     video_flux                    video(path_cam_config);
     //Initialization of video flux
-    video.read_flux();
+    video.read_flux_multithread();
     //end initialization of video flux
     processing_parameter          processing_parameter=video_processing::processing_config(path_processing_config);
    video_processing              processing(video.get_all_cameras()[0].get_frame()
@@ -17,8 +17,7 @@ void run(std::string path_cam_config,
     for (;stop_process!=27;)
     {
         video.read_flux_multithread();
-        processing.run_process(video);
-
+        processing.run_process(&video);
 
         show_videos(video, path_display_config);
         stop_process=cv::waitKey(1);

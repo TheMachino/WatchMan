@@ -29,14 +29,9 @@ display_config ReadDisplaySetting(std::string path_to_display_config)
 void show_videos(video_flux video, std::string path_to_display_config)
 {
 
-
-    std::cout<<"Number of camera"<<std::endl;
-    std::cout<<video.get_all_cameras().size()<<std::endl;
     display_config screen_setting= ReadDisplaySetting(path_to_display_config);
-    std::cout<<"size of image: "<<video.get_all_cameras()[0].get_frame().size<<std::endl;
     if (screen_setting.IsOneScreen==0)
     {
-        std::cout<<"size of screen: "<<screen_setting.size_screen<<std::endl;
         DisplayOneScreen(video, screen_setting.size_screen);
     }
 }
@@ -45,9 +40,6 @@ void show_videos(video_flux video, std::string path_to_display_config)
 void DisplayOneScreen(video_flux video, int size_screen)
 {
     // initialization step
-        std::cout<<"Display on one Screen"<<std::endl;
-        std::cout<<"Number of camera"<<std::endl;
-        std::cout<<video.get_all_cameras().size()<<std::endl;
         std::string text2display;
 
         int size_im=video.get_all_cameras()[0].get_size();
@@ -56,7 +48,6 @@ void DisplayOneScreen(video_flux video, int size_screen)
                                         video.get_all_cameras()[0].get_frame().type());
 
         int max_im_by_line=size_screen/size_im;
-        std::cout<<"max im par ligne: "<<max_im_by_line<<std::endl;
         int max_i=video.get_all_cameras().size()/max_im_by_line;
         int max_j;
         int pos_x=0;
@@ -73,7 +64,6 @@ void DisplayOneScreen(video_flux video, int size_screen)
 
         else
         {
-            std::cout<<"reste im: "<<nb_remain_cap<<std::endl;
             k=(nb_remain_cap==0) ? max_i: (max_i+1);
         }
         //Display all flux

@@ -312,6 +312,33 @@ src/video_processing.cpp.s:
 	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/src/video_processing.cpp.s
 .PHONY : src/video_processing.cpp.s
 
+tools/console_display.o: tools/console_display.cpp.o
+
+.PHONY : tools/console_display.o
+
+# target to build an object file
+tools/console_display.cpp.o:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/tools/console_display.cpp.o
+.PHONY : tools/console_display.cpp.o
+
+tools/console_display.i: tools/console_display.cpp.i
+
+.PHONY : tools/console_display.i
+
+# target to preprocess a source file
+tools/console_display.cpp.i:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/tools/console_display.cpp.i
+.PHONY : tools/console_display.cpp.i
+
+tools/console_display.s: tools/console_display.cpp.s
+
+.PHONY : tools/console_display.s
+
+# target to generate assembly for a file
+tools/console_display.cpp.s:
+	$(MAKE) -f CMakeFiles/watchman.dir/build.make CMakeFiles/watchman.dir/tools/console_display.cpp.s
+.PHONY : tools/console_display.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -342,6 +369,9 @@ help:
 	@echo "... src/video_processing.o"
 	@echo "... src/video_processing.i"
 	@echo "... src/video_processing.s"
+	@echo "... tools/console_display.o"
+	@echo "... tools/console_display.i"
+	@echo "... tools/console_display.s"
 .PHONY : help
 
 

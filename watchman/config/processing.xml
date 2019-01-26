@@ -8,7 +8,7 @@
 	4: Pedestrian Detection
 	5: Objects Detection 
 	-->
-	<processing_type>0</processing_type>
+	<processing_type>1</processing_type>
 	<!-- Path to processing parameters-->
 	<path_config_processing>path_config</path_config_processing>
 
